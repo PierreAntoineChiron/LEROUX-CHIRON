@@ -8,8 +8,8 @@ header {
 }
 
 .grid_container {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: grid; /* faire un tableau */
+    grid-template-columns: auto auto auto;  /* Fait un tableau "propre" */
     background-color: powderblue;
 }
 
