@@ -2,6 +2,21 @@ header {
     width: 100vw;
     background-color: darkgrey;
 }
-.test {
+
+.icon {
     width: 2vw;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: powderblue;
+}
+
+.grid_item {
+    border: solid 1px rgba(0, 0, 0, 0.8);
+}
+
+.produitgrille {
+    width: 15vw;
 }
