@@ -1,0 +1,21 @@
+body { /*Police de caractere, couleur du fond jolie, display:flex pour passer le body en flexbox but 3 commandes pour tout centrer
+    height pour qu'il fasse toute la page et margin: 0px pour virer la marge de firefox*/
+    font-family: Montserrat,sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+
+p.firstname { /*enleve la marge de base du <p> de prénom parce que c'est pas beau*/
+    margin-top: 0px;
+}
+
+form {/*agrandir le form pour avoir des bords arondis propres*/
+    background-color: azure;
+    padding: 30px;
+    border-radius: 30px;
+}
