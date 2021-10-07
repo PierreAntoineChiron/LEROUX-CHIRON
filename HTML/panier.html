@@ -2,16 +2,28 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../CSS/panier.css"><!--link permet "d'appeler" la page css pour qu'elle fasse effet, et est dans le head pour que ça concerne toute la page-->
+        <script src="panier.js"></script>
+        <link rel="stylesheet" href="../CSS/panier.css"><!--link permet "d'appeler" la page css-->
         <title>panier</title>
     </head>
 
     <body>
-        <header>
-            
-        </header>
-        <form>
-            Prénom :<br>
-            <input type="text" name="firstname" ><br>
+        <form> <!--Formulaire complet avec restriction de remplissage-->
+            <p class="firstname">Prénom*:</p>
+            <input type="text" name="firstname" required="required" >
+            <p>Nom*:</p>
+            <input type="text" name="lastname" required="required">
+            <p>Adresse Mail*:</p>
+            <input type="email" name="mailadress" required="required">
+            <p>Numéro de téléphone*:</p>
+            <input type="tel" id="phone" name="phone" pattern="[0]{1}[0-9]{9}" required="required">
+            <p>Adresse*: </p>
+            <input type="text" name="adress" required="required">
+            <p>Code postal*:</p>
+            <input type="text" id="codepostal" name="codepostal" pattern="[0-9]{5}" required="required">
+            <p>Date de livraison souhaitée*:</p>
+            <input type="date" min="2021-01-01" max="2021-12-31" required="required"><br><br>
+            <input type="submit" value="Valider la commande">
+            <input type="reset" value="Réinitialiser vos informations">
         </form>
     </body>

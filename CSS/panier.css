@@ -1,0 +1,21 @@
+body {
+    font-family: Montserrat,sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+}
+
+p.firstname {
+    margin-top: 0px;
+}
+
+form {
+    background-color: azure;
+    padding: 30px;
+    border-radius: 30px;
+}
+
