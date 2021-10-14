@@ -1,14 +1,68 @@
 
 {
     "1":{
-        "prix":150 ,
-        "couleur": {
+        "prix":19.99,
+        "couleur":{
+            "bleu":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_bleu_sans_fond.png",
+            "gris":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_gris_sans_fond.png",
+            "jaune":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_jaune_sans_fond.png",
+            "noir":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_noir_sans_fond.png",
+            "rose":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_rose_sans_fond.png",
+            "vert":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_vert_sans_fond.png"
+        }
+},
+    "2":{
+        "prix":49.99 ,
+        "couleur":{
             "marron":"../images/souris/Souris_marron.png",
             "bleu" : "../images/souris/Souris_bleu.png",
             "vert" : "../images/souris/Souris_vert.png",
             "noir" : "../images/souris/Souris_noir.png",
-            "rose" : "../images/souris/Souris_rose.png"
+            "rose" : "../images/souris/Souris_rose.png",
+            "rouge":"../images/souris/Souris_rouge.png"
         }
-
-    }
-}
+},
+    "3":{
+        "prix":59.99,
+        "couleur":{
+            "bleu":"../images/clavier/Clavier_bleu.png",
+            "bordeaux":"../images/clavier/Cavier_bordeaux.png",
+            "marron":"../images/clavier/Cavier_marron.png",
+            "mauve":"../images/clavier/Cavier_mauve/png",
+            "noir":"../images/clavier/Cavier_noir.png",
+            "vert":"../images/clavier/Cavier_vert.png"
+        }
+},
+    "4":{
+        "prix":99.99,
+        "rafraichissement":{
+            "60Hz":"60Hz",
+            "144Hz":"144Hz"
+        },
+        "taille":{
+            "petit":"21*29.7",
+            "grand":"24*32"
+        }
+},
+    "5":{
+        "prix":299.99,
+        "couleur":{
+            "bleu":"../images/chaises/Chaise_bleu.png",
+            "bordeaux":"../images/chaises/Chaise_bordeaux.png",
+            "marron":"../images/chaises/Chaise_marron.png",
+            "mauve":"../images/chaises/Chaise_mauve.png",
+            "noir":"../images/chaises/Chaise_noir.png",
+            "vert":"../images/chaises/Chaise_vert.png"
+        }
+},
+    "6":{
+        "prix":349.99,
+        "couleur":{
+            "bleu":"../images/bureaux/Bureaux_bleu.png",
+            "bordeaux":"../images/bureaux/Bureaux_bordeaux.png",
+            "marron":"../images/bureaux/Bureaux_marron.png",
+            "mauve":"../images/bureaux/Bureaux_mauve.png",
+            "noir":"../images/bureaux/Bureaux_noir.png",
+            "vert":"../images/bureaux/Bureaux_vert.png"
+        }
+}}
