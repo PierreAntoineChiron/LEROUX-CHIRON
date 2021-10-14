@@ -1,0 +1,14 @@
+
+{
+    "1":{
+        "prix":150 ,
+        "couleur": {
+            "marron":"../images/souris/Souris_marron.png",
+            "bleu" : "../images/souris/Souris_bleu.png",
+            "vert" : "../images/souris/Souris_vert.png",
+            "noir" : "../images/souris/Souris_noir.png",
+            "rose" : "../images/souris/Souris_rose.png"
+        }
+
+    }
+}
