@@ -26,11 +26,11 @@
         "prix":59.99,
         "couleur":{
             "bleu":"../images/clavier/Clavier_bleu.png",
-            "bordeaux":"../images/clavier/Cavier_bordeaux.png",
-            "marron":"../images/clavier/Cavier_marron.png",
-            "mauve":"../images/clavier/Cavier_mauve/png",
-            "noir":"../images/clavier/Cavier_noir.png",
-            "vert":"../images/clavier/Cavier_vert.png"
+            "bordeaux":"../images/clavier/Clavier_bordeaux.png",
+            "marron":"../images/clavier/Clavier_marron.png",
+            "mauve":"../images/clavier/Clavier_mauve/png",
+            "noir":"../images/clavier/Clavier_noir.png",
+            "vert":"../images/clavier/Clavier_vert.png"
         }
 },
     "4":{
