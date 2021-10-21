@@ -1,8 +1,19 @@
-let base_de_donnees = {};
+let base_de_couleur = {};
 fetch('/JS/base_de_donnees.json')
 .then(function(response) {
     return response.json();
 })
+
+let base_de_donnees = {};
+fetch('/JS/couleur.json')
+.then(function(response) {
+    return response.json2();
+})
+
+base_de_couleur=json2
+
+
+
 .then(function(json) {
     base_de_donnees = json
     let produit_id = new URLSearchParams(window.location.search).get("id"); // pour savoir que quel images on a cliqué, chaque images est définit par un nombre
@@ -11,6 +22,14 @@ fetch('/JS/base_de_donnees.json')
     let image = base_de_donnees[produit_id].couleur.noir; // on stocke le lien de l'image (c'est l'image noir) dans la variable image
     id_images_changeante.setAttribute("src",image); // on lui demande de changer la valeur associée a src par image
 });
+
+function DifferrenteCouleur(){
+  i=0
+  for (i=1; i<4; i++){
+    coul=base_de_couleur[i]
+    document.getElementById("demo").innerHTML = "Hello World!";
+  } 
+}
 
 
 function test(){
