@@ -13,9 +13,16 @@ fetch('/JS/base_de_donnees.json')
 });
 
 
+function test(){
+  let produit_id = new URLSearchParams(window.location.search).get("id");
+  let truc= base_de_donnees[produit_id].couleur
+  console.log(truc)
+}
+
 function ChangeImage(element){
   let produit_id = new URLSearchParams(window.location.search).get("id");
   let images= base_de_donnees[produit_id].couleur[element.value]
+  console.log(base_de_donnees[produit_id].couleur)
   id_images = document.getElementById("image_personnalisation"); 
   id_images_changeante.setAttribute("src",images)
 
