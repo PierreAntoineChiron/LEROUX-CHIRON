@@ -28,3 +28,7 @@ header {
     right:10px ;
     position: fixed;
 }
+
+h2 {
+    color: blueviolet;
+}
