@@ -25,6 +25,25 @@
         "4" : "mauve",
         "5" : "noir",
         "6" :"vert" 
+
+},
+    "5":{
+        "1": "bordeaux",
+        "2" : "bleu",
+        "3" : "marron",
+        "4" : "mauve",
+        "5" : "noir",
+        "6" :"vert" 
+        
+},
+
+    "6":{
+        "1": "bleu",
+        "2" : "bordeaux",
+        "3" : "marron",
+        "4" : "mauve",
+        "5" : "noir",
+        "6" :"vert" 
     
 
 }}
