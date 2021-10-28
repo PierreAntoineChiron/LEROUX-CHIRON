@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <script src="../JS/panier.js"></script>
+        
         <link rel="stylesheet" href="../CSS/panier.css"><!--link permet "d'appeler" la page css-->
         <title>panier</title>
     </head>
@@ -12,15 +12,15 @@
         
         <form> <!--Formulaire complet avec restriction de remplissage-->
             <p class="firstname">Prénom*:</p>
-            <input type="text" name="firstname" required="required" >
+            <input type="text" name="firstname" placeholder= "Ex:Bertrand" required="required" >
             <p>Nom*:</p>
-            <input type="text" name="lastname" required="required">
+            <input type="text" name="lastname" placeholder= "Ex:Perruchot" required="required">
             <p>Adresse Mail*:</p>
             <input type="email" name="mailadress" required="required">
             <p>Numéro de téléphone*:</p>
             <input type="tel" id="phone" name="phone" pattern="[0]{1}[0-9]{9}" required="required">
             <p>Adresse*: </p>
-            <input type="text" name="adress" required="required">
+            <input id="adress" type="text" name="adress" required="required">
             <p>Code postal*:</p>
             <input type="text" id="codepostal" name="codepostal" pattern="[0-9]{5}" required="required">
             <p>Date de livraison souhaitée*:</p>
@@ -31,5 +31,6 @@
 
         <footer id="footer"></footer>
 
+        <script src="../JS/panier.js"></script>
         <script src="../JS/page_principale.js"></script>
     </body>

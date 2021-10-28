@@ -19,3 +19,7 @@ form {/*agrandir le form pour avoir des bords arondis propres*/
     padding: 30px;
     border-radius: 30px;
 }
+
+.icon{
+    width: 2vw;
+}

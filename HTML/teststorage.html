@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>ELD ET ELCER</title>
+    </head>
+
+    <body>
+        <h1 id="title">Local Storage - JS- HTML</h1>
+
+        <fieldset>
+            <legend>Data à ajouter</legend>
+            <input id="inpKey" type="text" placeholder="Entrer la clef...">
+            <input id="inpValue" type="text" placeholder="Entrer la valeur... ">
+            <button type="button" id="btnInsert">Ajouter les données</button>
+        </fieldset>
+       
+        <fieldset>
+            <legend>Récapitulatif de commande</legend>
+        
+            <p class="firstname">Prénom*:</p>
+            <input  id="firstname" type="text" name="firstname" placeholder= "Ex:Bertrand" required="required" >
+            <p>Nom*:</p>
+            <input id="name" type="text" name="lastname" placeholder= "Ex:Perruchot" required="required">
+            <p>Adresse Mail*:</p>
+            <input id="mail" type="email" name="mailadress" required="required">
+            <p>Numéro de téléphone*:</p>
+            <input type="tel" id="phone" name="phone" pattern="[0]{1}[0-9]{9}" required="required">
+            <p>Adresse*: </p>
+            <input id="adress" type="text" name="adress" required="required">
+            <p>Code postal*:</p>
+            <input type="text" id="codepostal" name="codepostal" pattern="[0-9]{5}" required="required">
+            <p>Date de livraison souhaitée*:</p>
+            <input id="date" type="date" min="2021-10-10" max="2021-12-31" required="required"><br><br> <!--Date pas dynamique encore-->
+            <input type="submit" value="Valider la commande">
+            <input type="reset" value="Réinitialiser vos informations">
+        </fieldset>
+        <fieldset>
+            <legend>Storage Local</legend>
+            <div id="lsOutput"></div>
+        </fieldset>
+
+    </body>
+
+    <script type="text/javascript">
+        const inpKey = document.getElementById("inpKey");
+        const inpValue = document.getElementById("inpValue");
+        const btnInsert = document.getElementById("btnInsert");
+        const lsOutput = document.getElementById("lsOutput");
+
+        btnInsert.onclick = function() {
+            const key = inpKey.value;
+            const value = inpValue.value;
+
+            if (key && value) {
+                localStorage.setItem(key,value);
+                location.reload();
+
+            }
+        };
+
+        for (let i=0; i<localStorage.length;i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            lsOutput.innerHTML += `${key}: ${value}<br />`;
+        }
+    
+
+    </script>
