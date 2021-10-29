@@ -1,9 +1,34 @@
-//date=document.getElementById("date")
+const lsOutput = document.getElementById("lsOutput");
 
-//var maintenant=new Date();
-//var jour=maintenant.getDate();
-//var mois=maintenant.getMonth()+1;
-//var an=maintenant.getFullYear();
+    function store(){
+        var inputFirstName = document.getElementById("firstname");
+        var inputName = document.getElementById("name");
+        var inputEmail = document.getElementById("mail");
+        var inputPhone = document.getElementById("phone");
+        var inputAdresse = document.getElementById("adress");
+        var inputCodePostal = document.getElementById("codepostal");
+        var inputDate = document.getElementById("date");
 
-//date.setAttribute("min", "",an,"-",mois,"-",jour,"") //Bon ca fonctionne pas encore//
+        localStorage.setItem("Prénom", inputFirstName.value);
+        localStorage.setItem("Nom", inputName.value);
+        localStorage.setItem("Email", inputEmail.value);
+        localStorage.setItem("Numéro de télephone", inputPhone.value);
+        localStorage.setItem("Adresse", inputAdresse.value);
+        localStorage.setItem("Code Postal", inputCodePostal.value);
+        localStorage.setItem("Date de livraison", inputDate.value);
+        
+        }
 
+        for (let i=0; i<localStorage.length;i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            lsOutput.innerHTML += `${key}: ${value}<br />`;
+        }
+        
+        var i;
+
+            console.log("local storage");
+            for (i = 0; i < localStorage.length; i++)   {
+            console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+            }
