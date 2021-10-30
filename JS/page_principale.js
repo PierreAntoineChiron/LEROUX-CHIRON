@@ -18,3 +18,25 @@ function topFunction() { //Fait remoneter tout en haut de la page//
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+let base_de_donnees = {}; // creation de la variable base de donne
+fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier coller du cours)
+.then(function(response) {
+    return response.json();
+})
+
+.then(function(json) {
+    base_de_donnees = json // on affecte la base de donne a la variable json
+    var template=document.getElementById("produit"); // on lui indique sur quel template dans notre html on va travailler
+    for (let i=1; i < 7; i++) { // on a 6 elements ds notre base de donnee
+        let clone = document.importNode(template.content, true);  // copier coller du cours
+        newContent = clone.firstElementChild.innerHTML // copier coller du cours
+            .replace(/{{id-du-produit}}/g,i) // on remplace idée du produit qui est ds html par son id, c'est pr le lien vers la page de personalisation
+            .replace(/{{image}}/g,base_de_donnees[i].couleur.noir) // on affiche l'image
+            .replace(/{{titre}}/g,base_de_donnees[i].titre) // j'ai mis un titre à nos accesoire mais on pourra l'enlever ou mettre un commentaire ou le prix
+        clone.firstElementChild.innerHTML = newContent // copier coller du cours
+        document.body.appendChild(clone); // copier coller du cours
+    
+              
+    }
+});

@@ -11,44 +11,54 @@
 
         <header id="header"></header>
 
-        <section><!--c'est juste plus precis que 2 div à la suite avec différentes indentations-->
+       <!-- <section> c'est juste plus precis que 2 div à la suite avec différentes indentations
             <h2>Nos différents produits</h2>
             <div id="haut"></div>
-            <div>Filtres de choix</div> <!-- servira aux filtres plus tard, quand on fera du JS-->
+            <div>Filtres de choix</div> <!-- servira aux filtres plus tard, quand on fera du JS
 
 
             <div class="grid_container"> <!--Tableau qui contient les 6 objets-->
 
-<!--Differents items du tableau, on en a 6-->
+<!--Differents items du tableau, on en a 6
                 <div class="grid_item">Tapis de souris
-                    <a href="page_de_personalisation.html?id=1"><!--image, si tu clique dessus tu vas sur la deuxieme page-->
+                    <a href="page_de_personalisation.html?id=1"><!--image, si tu clique dessus tu vas sur la deuxieme page
                     <img src="../images/tapis_de_souris_sans_fond/Tapis_de_souris_noir_sans_fond.png" alt="tapis de souris" class="produitgrille"></a>
                 </div>
                 <div class="grid_item">Souris
-                    <a href="page_de_personalisation.html?id=2"><!--idem-->
+                    <a href="page_de_personalisation.html?id=2"><!--idem
                     <img src="../images/souris/Souris_noir.png" alt="souris" class="produitgrille"></a>
                 </div>
                 <div class="grid_item">Clavier
-                    <a href="page_de_personalisation.html?id=3"><!--idem-->
+                    <a href="page_de_personalisation.html?id=3"><!--idem
                     <img src="../images/clavier/Clavier_noir.png" alt="clavier" class="produitgrille"></a>
                 </div>
                 <div class="grid_item">Écrans
-                    <a href="page_de_personalisation.html?id=4"><!--idem-->
+                    <a href="page_de_personalisation.html?id=4"><!--idem
                     <img src="../images/ecran/ecran.png" alt="ecran" class="produitgrille"></a>
                 </div>
                 <div class="grid_item">Chaises
-                    <a href="page_de_personalisation.html?id=5"><!--idem-->
+                    <a href="page_de_personalisation.html?id=5"><!--idem
                         <img src="../images/chaises/Chaise_noir.png" alt="chaises gaming" class="produitgrille">
                     </a>
                 </div>
                 <div class="grid_item">Bureau 
-                    <a href="page_de_personalisation.html?id=6"><!--idem-->
+                    <a href="page_de_personalisation.html?id=6"><!--idem
                     <img src="../images/bureaux/Bureaux_noir.png" alt="bureau" class="produitgrille"></a>
                 </div>
             
             </div>
 
-        </section>
+        </section> -->
+
+        <template id="produit">
+            <div class="grid_item">
+                <a href="page_de_personalisation.html?id={{id-du-produit}}">
+                    <img src="{{image}}" class="produitgrille"> </a>                
+                <div>
+                    <h2>{{titre}}</h2>
+                </div>
+            </div>
+        </template>
 
         <button onclick="topFunction()" id="button" title="Remonter"></button>
         
