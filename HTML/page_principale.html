@@ -11,7 +11,27 @@
 
         <header id="header"></header>
 
-       <!-- <section> c'est juste plus precis que 2 div à la suite avec différentes indentations
+        <template id="produit">
+            <div class="grid_item">
+                <a href="page_de_personalisation.html?id={{id-du-produit}}">
+                    <img src="{{image}}" class="produitgrille"> </a>                
+                <div>
+                    <h2>{{titre}}</h2>
+                </div>
+            </div>
+        </template>
+
+        <button onclick="topFunction()" id="button" title="Remonter"></button>
+        
+        <footer id="footer"></footer>
+
+        <script src="../JS/page_principale.js"></script>
+    </body>
+</html>
+
+
+<!-- ancienne grille-->
+<!-- <section> c'est juste plus precis que 2 div à la suite avec différentes indentations
             <h2>Nos différents produits</h2>
             <div id="haut"></div>
             <div>Filtres de choix</div> <!-- servira aux filtres plus tard, quand on fera du JS
@@ -49,21 +69,3 @@
             </div>
 
         </section> -->
-
-        <template id="produit">
-            <div class="grid_item">
-                <a href="page_de_personalisation.html?id={{id-du-produit}}">
-                    <img src="{{image}}" class="produitgrille"> </a>                
-                <div>
-                    <h2>{{titre}}</h2>
-                </div>
-            </div>
-        </template>
-
-        <button onclick="topFunction()" id="button" title="Remonter"></button>
-        
-        <footer id="footer"></footer>
-
-        <script src="../JS/page_principale.js"></script>
-    </body>
-</html>
