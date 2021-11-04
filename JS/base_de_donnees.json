@@ -3,6 +3,7 @@
     "1":{
         "titre": "Tapis de souris",
         "prix":19.99,
+        "classe":"tapis_de_souris",
         "couleur":{
             "noir":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_noir_sans_fond.png",
             "bleu":"../images/tapis_de_souris_sans_fond/Tapis_de_souris_bleu_sans_fond.png",
@@ -15,6 +16,7 @@
     "2":{
         "titre" : "Souris",
         "prix":49.99 ,
+        "classe":"souris",
         "couleur":{
             "noir" : "../images/souris/Souris_noir.png",
             "marron":"../images/souris/Souris_marron.png",
@@ -27,6 +29,7 @@
     "3":{
         "titre": "Clavier",
         "prix":59.99,
+        "classe":"clavier",
         "couleur":{
             "noir":"../images/clavier/Clavier_noir.png",
             "bleu":"../images/clavier/Clavier_bleu.png",
@@ -39,6 +42,7 @@
     "4":{
         "titre":"Ecran",
         "prix":99.99,
+        "classe":"ecran",
         "couleur":{
             "noir":"../images/ecran/ecran.png"
         },
@@ -54,6 +58,7 @@
     "5":{
         "titre":"Chaise de bureau",
         "prix":299.99,
+        "classe":"chaise",
         "couleur":{
             "noir":"../images/chaises/Chaise_noir.png",
             "bleu":"../images/chaises/Chaise_bleu.png",
@@ -66,6 +71,7 @@
     "6":{
         "titre":"Bureau",
         "prix":349.99,
+        "classe":"bureau",
         "couleur":{
             "noir":"../images/bureaux/Bureaux_noir.png",
             "bleu":"../images/bureaux/Bureaux_bleu.png",
