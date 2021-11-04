@@ -14,7 +14,7 @@
                     <button class="btn" onclick="filterObjects('all')">Tout Afficher</button>
                     <button class="btn" onclick="filterObjects('bureau')">Cacher les bureaux</button>
                     <button class="btn" onclick="filterObjects('chaise')">Cacher les chaises</button>
-                    <button class="btn" onclick="filterObjects('tapis_de_souris')">Cacher les tapis de souris</button>
+                    <button class="btn" onclick="filtreObjetGaelle('tapis_de_souris')">Cacher les tapis de souris</button>
                     <button class="btn" onclick="filterObjects('clavier')">Cacher les claviers</button>
                     <button class="btn" onclick="filterObjects('ecran')">Cacher les écrans</button>
                     <button class="btn" onclick="filterObjects('ecran')">Cacher les souris</button>
@@ -22,7 +22,7 @@
 
     
         <template id="produit">
-            <div class="grid_item {{classe-du-produit}}"> <!-- le classe-du-produit doit etre changé pour que le div puis "disparaitre" quand on filtre,
+            <div class="grid_item {{classe-du-produit}}" id={{id-du-produit}}> <!-- le classe-du-produit doit etre changé pour que le div puis "disparaitre" quand on filtre,
                                                                 mais ça veux pas (sans doute a cause du firstElementChild dans ta fonction js du template), 
                                                                 j'ai pas encore la solution-->
                 <a href="page_de_personalisation.html?id={{id-du-produit}}">
@@ -32,6 +32,8 @@
                 </div>
             </div>
         </template>
+
+
 
         <footer id="footer"></footer>
 

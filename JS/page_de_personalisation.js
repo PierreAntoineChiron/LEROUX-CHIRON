@@ -36,13 +36,13 @@ const APIKEY= "pk.eyJ1IjoiZ2FlbGxlbGVyb3V4IiwiYSI6ImNrdmd1NHl0cTVzN3QzMXF3Z29yNm
 
 function livraison() {
   var address = document.getElementById("truc").value; // recupere adresse de l'input
-  fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${APIKEY}`) // on transforme l'adresse en longitude et lattitude
+  fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${APIKEY}`) // on transforme l'adresse en longitude et lattitude, le encode url permet de transformer tt ce qui va pas les espaces virgule et tt en quelque chose de lisible 
       .then(res => res.json())
       .then(data => {
           coord = data.features[0].center; // on recupere coordonne de l'adresse
           long=coord[0]; // longitude  de l'adresse
-          lat=coord[1]; // l'attitude de l'adresse
-          fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${encodeURIComponent(long)}%2C${encodeURIComponent(lat)}%3B4.8593999%2C45.7611438?alternatives=true&geometries=geojson&steps=true&access_token=${APIKEY}`) // on recupere distance entre nos 2 points
+          lat=coord[1]; // lattitude de l'adresse
+          fetch(`https://api.mapbox.com/directions/v5/mapbox/driving/${encodeURIComponent(long)}%2C${encodeURIComponent(lat)}%3B4.8593999%2C45.7611438?alternatives=true&geometries=geojson&steps=true&access_token=${APIKEY}`) // on recupere distance entre nos 2 points, %3B = ';' et %2C = ','
           .then(response => response.json() 
           .then(data=>{
               if (data.routes[0].distance >20000){

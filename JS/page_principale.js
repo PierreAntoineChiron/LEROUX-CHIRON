@@ -36,7 +36,6 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
             .replace(/{{titre}}/g,base_de_donnees[i].titre) // j'ai mis un titre à nos accesoire mais on pourra l'enlever ou mettre un commentaire ou le prix
         clone.firstElementChild.innerHTML = newContent // copier coller du cours
         document.body.appendChild(clone); // copier coller du cours
-    
               
     }
 });
@@ -44,11 +43,26 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
 function filterObjects(c) { //pas fonctionnel, doit servir au filtre
     var x, i;
     x = document.getElementsByClassName("grid-item");
+    console.log(x)
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
         removeClass(x[i], "show");
         if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
     }
+}
+
+
+function filtreObjetGaelle(machin){
+    var x, i;
+    x = document.getElementById("1");
+    console.log(x)
+    var template=document.getElementById("produit");
+    let clone = document.importNode(template.content, true);  // copier coller du cours
+        newContent = clone.firstElementChild.innerHTML 
+        removeClass(x[1],"show")
+    clone.firstElementChild.innerHTML = newContent // copier coller du cours
+    document.body.appendChild(clone); 
+
 }
 
 function addClass(element, name){ //pas fonctionnel
