@@ -8,11 +8,23 @@
     </head>
 
     <body>
-
         <header id="header"></header>
 
+        <div id="boutons"> <!-- Devraient être les boutons de filtrage, non fonctionnels pour l'instant mais c'est joli-->
+                    <button class="btn" onclick="filterObjects('all')">Tout Afficher</button>
+                    <button class="btn" onclick="filterObjects('bureau')">Cacher les bureaux</button>
+                    <button class="btn" onclick="filterObjects('chaise')">Cacher les chaises</button>
+                    <button class="btn" onclick="filterObjects('tapis_de_souris')">Cacher les tapis de souris</button>
+                    <button class="btn" onclick="filterObjects('clavier')">Cacher les claviers</button>
+                    <button class="btn" onclick="filterObjects('ecran')">Cacher les écrans</button>
+                    <button class="btn" onclick="filterObjects('ecran')">Cacher les souris</button>
+        </div> 
+
+    
         <template id="produit">
-            <div class="grid_item">
+            <div class="grid_item {{classe-du-produit}}"> <!-- le classe-du-produit doit etre changé pour que le div puis "disparaitre" quand on filtre,
+                                                                mais ça veux pas (sans doute a cause du firstElementChild dans ta fonction js du template), 
+                                                                j'ai pas encore la solution-->
                 <a href="page_de_personalisation.html?id={{id-du-produit}}">
                     <img src="{{image}}" class="produitgrille"> </a>                
                 <div>
@@ -21,9 +33,9 @@
             </div>
         </template>
 
-        <button onclick="topFunction()" id="button" title="Remonter"></button>
-        
         <footer id="footer"></footer>
+
+        <button onclick="topFunction()" id="button" title="Remonter"></button>
 
         <script src="../JS/page_principale.js"></script>
     </body>

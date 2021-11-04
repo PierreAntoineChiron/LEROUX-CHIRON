@@ -9,7 +9,7 @@ header {
 }
 
 .grid_container {
-    display: grid; /* faire un tableau */
+    display: grid; /* Fait un tableau */
     grid-template-columns: auto auto auto;  /* Fait un tableau "propre" */
     background-color: powderblue;
 }
@@ -47,4 +47,22 @@ h2 {
     cursor: pointer;
     padding: 15px;
     border-radius: 6px;
+}
+
+/* Petite mise en forme des boutons pour les filtres */
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
 }

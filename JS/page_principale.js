@@ -40,3 +40,35 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
               
     }
 });
+
+function filterObjects(c) { //pas fonctionnel, doit servir au filtre
+    var x, i;
+    x = document.getElementsByClassName("grid-item");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+        if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+    }
+}
+
+function addClass(element, name){ //pas fonctionnel
+    var i, arr1,arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++){
+        if(arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+        }
+    }
+}
+
+function removeClass(element, name){ //pas fonctionnel
+    var i ,arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++){
+        while(arr1.indexOf(arr2[i]) > -1){
+            arr1.splice(arr1.indexOf(arr2[i]), 1)
+        }
+    }
+}
