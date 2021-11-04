@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="../CSS/page_de_personalisation.css"><!--link permet "d'appeler" la page css pour qu'elle fasse effet, et est dans le head pour que ça concerne toute la page-->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
         <title>page_de_personalisation</title>
     </head>
 
@@ -19,9 +21,16 @@
             <img id="image_personnalisation" src="" alt="images du produit" class="image">
         </h2>
         
+        <input id="truc" placeholder="Entrez une adresse ici" type="text">; 
+        <button type="button" onclick="livraison()" >calcul du prix de livraison</button>;
+        <div id="prix">199 €</div>
+        <div id="phrase">Vous n'avez pas choisi de vous faire livrez</div>
+
+        
         <footer id="footer"></footer>
 
         <script src="../JS/page_de_personalisation.js"></script>
+        
     </body>
         
 </html>
