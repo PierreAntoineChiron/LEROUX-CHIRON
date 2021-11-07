@@ -28,7 +28,7 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
 .then(function(json) {
     base_de_donnees = json // on affecte la base de donne a la variable json
     var template=document.getElementById("produit"); // on lui indique sur quel template dans notre html on va travailler
-    for (let i=1; i < 7; i++) { // on a 6 elements ds notre base de donnee
+    for (let i=1; i < 6; i++) { // on a 6 elements ds notre base de donnee
         let clone = document.importNode(template.content, true);  // copier coller du cours
         newContent = clone.firstElementChild.innerHTML // copier coller du cours
             .replace(/{{id-du-produit}}/g,i) // on remplace idée du produit qui est ds html par son id, c'est pr le lien vers la page de personalisation
@@ -42,13 +42,9 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
 
 function filterObjects(c) { //pas fonctionnel, doit servir au filtre
     var x, i;
-    x = document.getElementsByClassName("grid-item");
-    console.log(x)
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
-    }
+    var y = document.getElementById("1");
+    console.log(y);
+
 }
 
 

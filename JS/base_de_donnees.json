@@ -40,22 +40,6 @@
         }
 },
     "4":{
-        "titre":"Ecran",
-        "prix":99.99,
-        "classe":"ecran",
-        "couleur":{
-            "noir":"../images/ecran/ecran.png"
-        },
-        "rafraichissement":{
-            "60Hz":"60Hz",
-            "144Hz":"144Hz"
-        },
-        "taille":{
-            "petit":"21*29.7",
-            "grand":"24*32"
-        }
-},
-    "5":{
         "titre":"Chaise de bureau",
         "prix":299.99,
         "classe":"chaise",
@@ -68,7 +52,7 @@
             "vert":"../images/chaises/Chaise_vert.png"
         }
 },
-    "6":{
+    "5":{
         "titre":"Bureau",
         "prix":349.99,
         "classe":"bureau",
