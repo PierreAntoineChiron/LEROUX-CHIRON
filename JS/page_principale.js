@@ -1,6 +1,5 @@
 fetch("header.html").then(contenu => contenu.text()).then(texte => {document.getElementById("header").innerHTML = texte;})
 fetch("footer.html").then(contenu => contenu.text()).then(texte => {document.getElementById("footer").innerHTML = texte;})
-fetch("bouton.html").then()
 
 var mybutton = document.getElementById("button");
 
@@ -39,6 +38,8 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
               
     }
 });
+
+//FILTRES FUCK
 
 function filterObjects(c) { //pas fonctionnel, doit servir au filtre
     var x, i;
