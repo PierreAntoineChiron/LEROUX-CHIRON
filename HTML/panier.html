@@ -43,6 +43,21 @@
         <button type="button" onclick="livraison(); prixtotal()" >Calcul du prix de livraison</button>
         <button type="button" onclick="prixtotal()">Claculer le prix</button>
 
+        <template id="produit">
+            <div class="grid_item {{classe-du-produit}}"> <!-- le classe-du-produit doit etre changé pour que le div puis "disparaitre" quand on filtre,
+                                                                mais ça veux pas (sans doute a cause du firstElementChild dans ta fonction js du template), 
+                                                                j'ai pas encore la solution-->
+
+                    <img src="{{image}}" class="produitgrille"> </a>  
+                    <div>{{prix}}</div>   
+                    <div>{{quantite}}</div>           
+                <div>
+                    <h2>{{titre}}</h2>
+                </div>
+                <button type="button" onclick="plus()">plus</button>
+            </div>
+        </template>
+
 
         <div id="prixtotal">truc</div>
         <div id="phrase">Vous n'avez pas choisi de vous faire livrer</div>
