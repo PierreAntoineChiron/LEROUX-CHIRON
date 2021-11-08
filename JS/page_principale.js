@@ -1,6 +1,5 @@
 fetch("header.html").then(contenu => contenu.text()).then(texte => {document.getElementById("header").innerHTML = texte;})
 fetch("footer.html").then(contenu => contenu.text()).then(texte => {document.getElementById("footer").innerHTML = texte;})
-fetch("bouton.html").then()
 
 var mybutton = document.getElementById("button");
 

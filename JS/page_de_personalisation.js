@@ -79,7 +79,13 @@ function addPanier(){
     if (nbprod > 0) {
         valeurphrase = document.getElementById("couleur2").innerHTML;
         console.log(valeurphrase)
-        localStorage.setItem(localStorage.length , [base_de_donnees[produit_id].titre, base_de_donnees[produit_id].prix, nbprod, valeurphrase]) 
+        if (nbprod > 9) {
+            let prixpfinal = 0.9*prixp
+            localStorage.setItem(localStorage.length , [produit_id,base_de_donnees[produit_id].titre, prixpfinal, nbprod, valeurphrase]) 
+        }
+        else{
+            localStorage.setItem(localStorage.length , [produit_id,base_de_donnees[produit_id].titre, prixp, nbprod, valeurphrase])
+        }
     }
     else {
         alert("Veuillez entrer une quantité valide")
@@ -91,8 +97,8 @@ function prixtotal() {
     valeurfdl = parseInt(document.getElementById("phrase").innerHTML)
     for (let i=0 ; i <localStorage.length ; i++) {
         arraytemp = localStorage.getItem(i).split(",");
-        prixtemp = arraytemp[1]
-        nbtemp = arraytemp[2]
+        prixtemp = arraytemp[2]
+        nbtemp = arraytemp[3]
         prixtotaltest = prixtotaltest + prixtemp*nbtemp;
     }
     let prixt = document.getElementById("prixtotal");
