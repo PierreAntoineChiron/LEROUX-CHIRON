@@ -40,6 +40,8 @@ fetch('/JS/base_de_donnees.json') // on recupere la base de donnee (copier colle
     }
 });
 
+//FILTRES FUCK
+
 function filterObjects(c) { //pas fonctionnel, doit servir au filtre
     var x, i;
     var y = document.getElementById("1");

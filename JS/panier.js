@@ -1,5 +1,3 @@
-const lsOutput = document.getElementById("lsOutput");
-
     function store(){
         var inputFirstName = document.getElementById("firstname");
         var inputName = document.getElementById("name");
@@ -17,18 +15,4 @@ const lsOutput = document.getElementById("lsOutput");
         localStorage.setItem("Code Postal", inputCodePostal.value);
         localStorage.setItem("Date de livraison", inputDate.value);
         
-        }
-
-        for (let i=0; i<localStorage.length;i++) {
-            const key = localStorage.key(i);
-            const value = localStorage.getItem(key);
-
-            lsOutput.innerHTML += `${key}: ${value}<br />`;
-        }
-        
-        var i;
-
-            console.log("local storage");
-            for (i = 0; i < localStorage.length; i++)   {
-            console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-            }
+}

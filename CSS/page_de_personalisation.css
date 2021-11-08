@@ -10,7 +10,10 @@ header {
 
 .image {
     width :20vw ;
+}
 
+#couleur2 {
+    display: none;
 }
 
 div{
