@@ -95,7 +95,7 @@ function addPanier(){
 function prixtotal() {
     prixtotaltest = 0
     valeurfdl = parseInt(document.getElementById("phrase").innerHTML)
-    for (let i=0 ; i <localStorage.length ; i++) {
+    for (let i=0 ; i <localStorage.length - 7 ; i++) {
         arraytemp = localStorage.getItem(i).split(",");
         prixtemp = arraytemp[2]
         nbtemp = arraytemp[3]

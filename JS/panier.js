@@ -19,7 +19,7 @@ fetch('/JS/base_de_donnees.json')
         clone.firstElementChild.innerHTML = newContent // copier coller du cours
         document.body.appendChild(clone); // copier coller du cours
               
-    }
+    }})
  
     
 const APIKEY= "pk.eyJ1IjoiZ2FlbGxlbGVyb3V4IiwiYSI6ImNrdmd1NHl0cTVzN3QzMXF3Z29yNmdlOTUifQ.uOKemiUOXlxp59va8Q6TUw";
@@ -36,15 +36,12 @@ function livraison() {
           .then(response => response.json() 
           .then(data=>{
               if (data.routes[0].distance >20000){
-              arraytemp = localStorage.getItem(i).split(",");
-              let produit_id = arraytemp[0]
-              let prixp = base_de_donnees[produit_id].prix;
               let fdl = (5+0.07*data.routes[0].distance)/1000;
               fdl = Math.round((fdl)*100) / 100;
-              document.querySelector('#prix').innerHTML=(prixp+fdl ) + '€' ;
               document.querySelector('#phrase').innerHTML=(fdl); 
               }
               else{
+                  fdl = 0
                   document.querySelector('#phrase').innerHTML="Prix de la livraison : 0 €"; 
                   console.log(base_de_donnees)     
               }
@@ -54,7 +51,7 @@ function livraison() {
 function prixtotal() {
     prixtotaltest = 0
     valeurfdl = parseInt(document.getElementById("phrase").innerHTML)
-    for (let i=0 ; i <localStorage.length -7 ; i++) {
+    for (let i=0 ; i <localStorage.length - 7; i++) {
         arraytemp = localStorage.getItem(i).split(",");
         prixtemp = arraytemp[2]
         nbtemp = arraytemp[3]
@@ -81,4 +78,4 @@ function store(){
         localStorage.setItem("Code Postal", inputCodePostal.value);
         localStorage.setItem("Date de livraison", inputDate.value);
         
-}})
+}
